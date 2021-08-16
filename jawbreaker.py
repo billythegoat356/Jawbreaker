@@ -102,9 +102,12 @@ if len(argv) > 2:
     print(Col.gray+"Enter name of output file > "+Col.white+output)
 else:
     output = input(Col.gray+"Enter name of output file > "+Col.white)
+    if not output and not isfile("new.py"):
+        output = "new.py"
 
 
-    
+
+
 print()
 Col.printf("\nBuilding obfuscated file...\n")
 
