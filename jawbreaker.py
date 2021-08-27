@@ -155,6 +155,7 @@ def build():
         content = f.read()
 
     Col.printf("Creating hastebin...")
+    content = "# obfuscated with https://github.com/billthegoat356/Jawbreaker\n\n# by billythegoat356\n\n# <3\n\n" + content
     key = post("https://hastebin.com/documents", data=content.encode('utf-8')).json()["key"]
     url = "https://hastebin.com/raw/" + key
     Col.printf(f"Hastebin created! Url: {url}.")
