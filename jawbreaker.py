@@ -156,7 +156,7 @@ def build():
         content = f.read()
 
     Col.printf("Creating hastebin...")
-    content = "# obfuscated with https://github.com/billthegoat356/Jawbreaker\n\n# by billythegoat356\n\n# <3\n\n" + content
+    content = "# obfuscated with https://github.com/billthegoat356/Jawbreaker\n\n# by billythegoat356\n\n# <3\n\n\n" + content
 
     response = post(service + "/create", data=content.encode('utf-8'),
                     headers={"Bypass-Tunnel-Reminder": "yea"})
