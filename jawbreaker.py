@@ -160,7 +160,8 @@ def build():
 
     response = post(service + "/create", data=content.encode('utf-8'),
                     headers={"Bypass-Tunnel-Reminder": "yea"})
-    if response.status_code != 200:
+    
+    if response.status_code == 404:
         input(Col.red+"Error! Hastebin service is maybe down."+Col.white)
         exit()
         
