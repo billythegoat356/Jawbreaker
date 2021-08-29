@@ -12,7 +12,7 @@
 <p align="center">
   <strong>Jawbreaker is a Python obfuscator written in Python3, using double encoding in</strong>
   <br>
-  <strong>base16, base32, base64, HTTP requests and a <a href="https://github.com/billythegoat356/Raven">Hastebin-like API</a> made and hosted by me.</strong>
+  <strong>base16, base32, base64, HTTP requests and a <a href="https://github.com/billythegoat356/Raven">Hastebin-like API</a> made and hosted by me on my old laptop.</strong>
 </p>
 <br>
 
