@@ -12,7 +12,7 @@
 <p align="center">
   <strong>Jawbreaker is a Python obfuscator written in Python3, using double encoding in</strong>
   <br>
-  <strong>base16, base32, base64, HTTP requests and the Hastebin API.</strong>
+  <strong>base16, base32, base64, HTTP requests and a <a href="https://github.com/billythegoat356/Raven">Hastebin-like API</a> made and hosted by me.</strong>
 </p>
 <br>
 
@@ -25,7 +25,7 @@
 <br>
 <strong>+ Very fast execution</strong>
 <br>
-<strong>+ File size will always be 84kb, no matter your code's length</strong>
+<strong>+ File size will always be 49kb, no matter your code's length</strong>
 <br>
 
 <p align="right">
@@ -33,13 +33,13 @@
 </p>
 
 <br>
-<strong>- Using third-party HTTP server</strong>
+<strong>- Using third-party <a href="https://hastebin.loca.lt">HTTP server</a> (hosted by me)</strong>
 <br>
 <strong>- Using HTTP requests</strong>
 <br>
-<strong>- Hastebin is laggy and sometimes you can't create a paste</strong>
+<strong>- Sometimes the API is down. Check his availability <a href="https://hastebin.loca.lt">here</a></strong>
 <br>
-<strong>- Pastes last only a month</strong>
+<strong>- The API is sometimes slow, since I have really bad internet</strong>
 <br><br>
 
 -----
