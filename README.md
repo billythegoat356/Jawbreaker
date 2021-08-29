@@ -14,7 +14,7 @@
   <br>
   <strong>base16, base32, base64, HTTP requests and the Hastebin API.</strong>
 </p>
-<br><br>
+<br>
 
 -----
 
