@@ -38,6 +38,8 @@
 <strong>- Using HTTP requests</strong>
 <br>
 <strong>- Hastebin is laggy and sometimes you can't create a paste</strong>
+<br>
+<strong>- Pastes last only a month</strong>
 <br><br>
 
 -----
