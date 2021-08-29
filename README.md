@@ -44,6 +44,8 @@
 
 ### <p align="center">💡 Ideas 💡</p>
 
+<p align="center"><strong>Feel free to make a pull request on this repository to submit any idea!</strong</p>
+
 <br><br>
 * Use random order encoding, like `base16(base32(base64("hello world")))` -> `base32(base64(base16("hello world")))`
 * Host the HTTP server myself with <a href="https://github.com/billythegoat356/Raven">Raven</a>
