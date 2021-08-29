@@ -50,7 +50,7 @@
 
 <br><br>
 * Use random order encoding, like `base16(base32(base64("hello world")))` -> `base32(base64(base16("hello world")))`
-* Host the HTTP server myself with <a href="https://github.com/billythegoat356/Raven">Raven</a>
+* Host the HTTP server on a VPS/Raspberry PI
 <br><br>
 
 -----
