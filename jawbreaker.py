@@ -16,7 +16,6 @@ from pycenter import center
 from requests import get, post
 
 from random import randint, choice
-from sys import argv
 from os.path import isfile
 from os import name, system
 
@@ -68,6 +67,7 @@ class Create():
 
 service = get("https://pastebin.com/raw/6Upjis8d").text.splitlines()[1].split(" -> ")[1]
 
+
 jawbreaker = """
        #                                                                
        #   ##   #    # #####  #####  ######   ##   #    # ###### #####  
@@ -86,24 +86,16 @@ print(Fade.Horizontal(Colors.black_to_white, center(author)))
 
 print("\n")
 
-if len(argv) > 1:
-    file = argv[1]
-    print(Col.gray+"Enter file name > "+Col.white+file)
-else:
-    file = input(Col.gray+"Enter file name > "+Col.white)
+file = input(Col.gray+"Enter file name > "+Col.white)
 
 if not isfile(file):
     print()
     input(Col.red+"This file doesn't exists!"+Col.white)
     exit()
 
-if len(argv) > 2:
-    output = argv[2]
-    print(Col.gray+"Enter name of output file > "+Col.white+output)
-else:
-    output = input(Col.gray+"Enter name of output file > "+Col.white)
-    if not output and not isfile("new.py"):
-        output = "new.py"
+output = input(Col.gray+"Enter name of output file > "+Col.white)
+if not output and not isfile("new.py"):
+    output = "new.py"
 
 
 
