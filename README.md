@@ -37,7 +37,7 @@
 <br>
 <strong>- Using HTTP requests</strong>
 <br>
-<strong>- Sometimes the API is down. Check his availability <a href="https://pastebin.com/raw/6Upjis8d">here</a></strong>
+<strong>- Sometimes the API is down. Check his availability <a href="https://Jawbreaker.billythegoat356.repl.co">here</a></strong>
 <br>
 <strong>- The API is sometimes slow, since I have really bad internet</strong>
 <br><br>
