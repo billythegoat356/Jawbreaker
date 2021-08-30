@@ -33,7 +33,7 @@
 </p>
 
 <br>
-<strong>- Using third-party HTTP server (hosted by me)</strong>
+<strong>- Using a third-party HTTP server (hosted by me)</strong>
 <br>
 <strong>- Using HTTP requests</strong>
 <br>
