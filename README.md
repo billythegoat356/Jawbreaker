@@ -33,11 +33,11 @@
 </p>
 
 <br>
-<strong>- Using third-party <a href="https://hastebin.loca.lt">HTTP server</a> (hosted by me)</strong>
+<strong>- Using third-party HTTP server (hosted by me)</strong>
 <br>
 <strong>- Using HTTP requests</strong>
 <br>
-<strong>- Sometimes the API is down. Check his availability <a href="https://hastebin.loca.lt">here</a></strong>
+<strong>- Sometimes the API is down. Check his availability <a href="https://pastebin.com/raw/6Upjis8d">here</a></strong>
 <br>
 <strong>- The API is sometimes slow, since I have really bad internet</strong>
 <br><br>
