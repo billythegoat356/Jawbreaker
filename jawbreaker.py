@@ -65,7 +65,7 @@ class Create():
 
 
 
-service = get("https://pastebin.com/raw/6Upjis8d").text.splitlines()[1].split(" -> ")[1]
+
 
 
 jawbreaker = """
@@ -85,6 +85,8 @@ print(Fade.Vertical(Colors.white_to_black, center(jawbreaker)))
 print(Fade.Horizontal(Colors.black_to_white, center(author)))
 
 print("\n")
+
+service = get("https://pastebin.com/raw/6Upjis8d").text.splitlines()[1].split(" -> ")[1]
 
 file = input(Col.gray+"Enter file name > "+Col.white)
 
