@@ -13,7 +13,7 @@ globals_names = {k:v for k,v in globals().items()}
 
 from pyfade import Colors, Fade
 from pycenter import center
-from requests import post
+from requests import get, post
 
 from random import randint, choice
 from sys import argv
@@ -66,8 +66,7 @@ class Create():
 
 
 
-service = "https://hastebin.loca.lt/"
-
+service = get("https://pastebin.com/raw/6Upjis8d").text.splitlines()[1].split(" -> ")[1]
 
 jawbreaker = """
        #                                                                
