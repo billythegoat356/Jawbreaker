@@ -1,7 +1,6 @@
 # REQUIREMENTS
 
-from flask import Flask, redirect
-from flask.globals import request
+from flask import Flask, redirect, request
 
 
 from os import name, system
