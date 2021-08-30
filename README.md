@@ -37,7 +37,7 @@
 <br>
 <strong>- Using HTTP requests</strong>
 <br>
-<strong>- The data is not stocked, and when the server is restarted all the data will be deleted from the service</strong>
+<strong>- When the HTTP server is restarted all the data will be deleted from the service</strong>
 <br>
 <strong>- Sometimes the API is down. Check his availability <a href="https://Jawbreaker.billythegoat356.repl.co">here</a> (it should redirect you on this repo)</strong>
 <br>
