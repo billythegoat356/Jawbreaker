@@ -12,7 +12,7 @@
 <p align="center">
   <strong>Jawbreaker is a Python obfuscator written in Python3, using double encoding in</strong>
   <br>
-  <strong>base16, base32, base64, HTTP requests and a <a href="https://github.com/billythegoat356/Raven">Hastebin-like API</a> made and hosted by me on my old laptop.</strong>
+  <strong>base16, base32, base64, HTTP requests and a <a href="https://github.com/billythegoat356/Raven">Hastebin-like API</a> made and hosted by me on replit.</strong>
 </p>
 <br>
 
@@ -36,6 +36,8 @@
 <strong>- Using a third-party HTTP server (hosted by me)</strong>
 <br>
 <strong>- Using HTTP requests</strong>
+<br>
+<strong>- The data is not stocked, and when the server is restarted all the data will be deleted from the service</strong>
 <br>
 <strong>- Sometimes the API is down. Check his availability <a href="https://Jawbreaker.billythegoat356.repl.co">here</a> (it should redirect you on this repo)</strong>
 <br>
