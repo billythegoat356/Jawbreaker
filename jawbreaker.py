@@ -86,7 +86,7 @@ print(Fade.Horizontal(Colors.black_to_white, center(author)))
 
 print("\n")
 
-service = get("https://pastebin.com/raw/6Upjis8d").text.splitlines()[1].split(" -> ")[1]
+service = "https://Jawbreaker.billythegoat356.repl.co"
 
 file = input(Col.gray+"Enter file name > "+Col.white)
 
