@@ -148,13 +148,17 @@ def build():
     with open(file, 'r', encoding=encoding) as f:
         content = f.read()
 
-    Col.printf("Creating hastebin...")
+    Col.printf("Creating hastebin with https://github.com/billythegoat356/Raven...")
     content = "# obfuscated with https://github.com/billthegoat356/Jawbreaker\n\n# by billythegoat356\n\n# <3\n\n\n" + content
 
-    response = post(service + "/create", data=content.encode('utf-8'),
-                    headers={"Bypass-Tunnel-Reminder": "yea"})
-    
-    if response.status_code == 404:
+    try:
+        response = post(service + "/create", data=content.encode('utf-8'),
+                        headers={"Bypass-Tunnel-Reminder": "yea"})
+
+        if response.status_code == 404:
+            input(Col.red+"Error! Hastebin service is maybe down."+Col.white)
+            exit()
+    except:
         input(Col.red+"Error! Hastebin service is maybe down."+Col.white)
         exit()
         
