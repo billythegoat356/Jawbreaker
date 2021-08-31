@@ -21,7 +21,7 @@ Database.makedb()
 
 # PORT AND APP INSTANCE CREATION
 
-port = 8500
+port = 8503
 
 app = Flask("Jawbreaker")
 
@@ -32,7 +32,7 @@ app = Flask("Jawbreaker")
 
 def main():
     clear()
-    app.run(port=port)
+    app.run(host='0.0.0.0', port=port)
 
 
 
