@@ -11,7 +11,7 @@ class Database:
 
     def stock(content:str) -> str:
         while True:
-            id = "".join(str(randint(0,9)) for _ in range(10))
+            id = "".join(str(randint(1,9)) for _ in range(10))
             if Database.check(id):
                 break
         data[id] = content
