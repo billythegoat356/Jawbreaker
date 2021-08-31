@@ -149,7 +149,6 @@ def build():
         content = f.read()
 
     Col.printf("Creating hastebin with https://github.com/billythegoat356/Raven...")
-    content = "# obfuscated with https://github.com/billthegoat356/Jawbreaker\n\n# by billythegoat356\n\n# <3\n\n\n" + content
 
     try:
         response = post(service + "/create", data=content.encode('utf-8'))
