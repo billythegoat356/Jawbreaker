@@ -21,7 +21,7 @@
 ### <p align="center">⭐ Features ⭐</p>
 
 <br><br>
-<strong>+ Goof obfuscation, skids won't be able to see your code</strong>
+<strong>+ Good obfuscation, skids won't be able to see your code</strong>
 <br>
 <strong>+ Very fast execution</strong>
 <br>
