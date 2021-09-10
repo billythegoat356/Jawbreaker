@@ -88,7 +88,7 @@ print(Fade.Horizontal(Colors.black_to_white, center(author)))
 
 print("\n")
 
-service = "https://Jawbreaker.billythegoat356.repl.co"
+service = "https://jawbreaker.pagekite.me/"
 
 file = input(Col.gray+"Enter file name > "+Col.white)
 
