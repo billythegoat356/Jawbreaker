@@ -20,7 +20,7 @@ def clear():
 
 # PORT AND APP INSTANCE CREATION
 
-port = 8501
+port = 8500
 
 app = Flask("Jawbreaker")
 
@@ -31,7 +31,7 @@ app = Flask("Jawbreaker")
 
 def main():
     clear()
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='', port=port)
 
 
 
