@@ -39,7 +39,7 @@
 <br>
 <strong>- When the HTTP server is restarted all the data will be deleted from the service</strong>
 <br>
-<strong>- Sometimes the API is down. Check his availability <a href="https://jawbreaker.pagekite.me/">here</a> (it should redirect you on this repo)</strong>
+<strong>- Sometimes the API is down. Check his availability <a href="https://jawbreaker.loca.lt/">here</a> (it should redirect you on this repo)</strong>
 <br>
 <strong>- The API is sometimes slow, since I have really bad internet</strong>
 <br><br>
