@@ -88,7 +88,7 @@ print(Fade.Horizontal(Colors.black_to_white, center(author)))
 
 print("\n")
 
-service = "https://jawbreaker.loca.lt/"
+service = "https://hastebin.com"
 
 file = input(Col.gray+"Enter file name > "+Col.white)
 
@@ -102,10 +102,12 @@ if not output:
     if not isfile("new.py"):
         output = "new.py"
     else:
+        x = 1
         while True:
-            output = "new" + str(randint(10, 100)) + ".py"
+            output = "new" + str(x) + ".py"
             if not isfile(output):
                 break
+            x += 1
 
 
 
@@ -147,13 +149,6 @@ def random(l:int=2) -> str:
         if rdm not in defined:
             defined.append(rdm)
             return rdm
-    
-def gmode():
-    modes = {"1": "all",
-            "2": "b16",
-            "3": "b32",
-            "4": "b64"}
-    return randint(1, 4)
 
 
 def build():
@@ -161,19 +156,19 @@ def build():
     with open(file, 'r', encoding=encoding) as f:
         content = f.read()
 
-    Col.printf("Creating hastebin with https://github.com/billythegoat356/Raven...")
+    Col.printf("Creating hastebin...")
 
     try:
-        response = post(service + "/create", data=content.encode('utf-8'))
+        response = post(service + "/documents", data=content.encode('utf-8'))
 
-        if response.status_code == 404:
-            input(Col.red+"Error! Hastebin service is maybe down."+Col.white)
+        if response.status_code != 200:
+            input(Col.red+f"Error! Hastebin service is maybe down. Response status code: {response.status_code}"+Col.white)
             exit()
     except:
         input(Col.red+"Error! Hastebin service is maybe down."+Col.white)
         exit()
         
-    url = service + "/get/" + response.text
+    url = service + "/raw/" + response.json()['key']
     Col.printf(f"Hastebin created! Url: {url}.")
 
 
@@ -190,25 +185,13 @@ def build():
     chars_list = random()
     Col.printf("Creating content list...")
     file_1.write(f"{chars_list}=[];")
-    content = f"""{exc}({urlp}({req}("{url}")).read())"""
+    content = f"""{exc}({urlp}({req}("{url}",headers=%s)).read())""" % "{'user-agent':''}"
 
-
-    print("Generating random mode...")
-
-    mode = gmode()
-
-    print("Random mode: " + str(mode))
 
     Col.printf("Encoding content...")
 
-    if mode == 1:
-        content = b16encode(b32encode(b64encode(content.encode(encoding)))).decode(encoding)
-    elif mode == 2:
-        content = b16encode(content.encode(encoding)).decode(encoding)
-    elif mode == 3:
-        content = b32encode(content.encode(encoding)).decode(encoding)
-    elif mode == 4:
-        content = b64encode(content.encode(encoding)).decode(encoding)
+    content = b16encode(b32encode(b64encode(content.encode(encoding)))).decode(encoding)
+
 
     random_chars_list = []
 
@@ -231,14 +214,7 @@ def build():
 
     Col.printf("Building desobfuscator...")
 
-    if mode == 1:
-        dcontent = f"{exc}({b64}({b32}({b16}({content_name}))));"
-    elif mode == 2:
-        dcontent = f"{exc}({b16}({content_name}));"
-    elif mode == 3:
-        dcontent = f"{exc}({b32}({content_name}));"
-    elif mode == 4:
-        dcontent = f"{exc}({b64}({content_name}));"
+    dcontent = f"{exc}({b64}({b32}({b16}({content_name}))));"
 
     file_1.write(dcontent)
 
