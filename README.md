@@ -60,5 +60,15 @@
 <br><br>
 
 -----
+  
+### <p align="center"> Deobfuscators </p>
+
+<br><br>
+* [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) By [HideakiAtsuyo](https://github.com/HideakiAtsuyo) (Language: C#)
+* [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) By [Noderyos](https://github.com/Noderyos) (Language: Python)
+* [Jawfixer](https://github.com/NSDCode/Jawfixer) By [NSDCode](https://github.com/NSDCode) (Language: C#)
+<br><br>
+
+-----
 
 ### <p align="center">billythegoat356</p>
