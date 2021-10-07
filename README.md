@@ -67,6 +67,7 @@
 * [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) By [HideakiAtsuyo](https://github.com/HideakiAtsuyo) (Language: C#)
 * [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) By [Noderyos](https://github.com/Noderyos) (Language: Python)
 * [Jawfixer](https://github.com/NSDCode/Jawfixer) By [NSDCode](https://github.com/NSDCode) (Language: C#)
+* [jawbreaker-Deobfuscator](https://github.com/Bleu-No/jawbreaker-Deobfuscator) By [Bleu-No](https://github.com/Bleu-No) (Language: Python)
 <br><br>
 
 -----
