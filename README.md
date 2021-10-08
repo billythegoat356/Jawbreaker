@@ -51,23 +51,23 @@
 <br><br>
 
 -----
+  
+### <p align="center">🪓 Deobfuscators 🪓</p>
+
+<br><br>
+* [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) By [HideakiAtsuyo](https://github.com/HideakiAtsuyo) (Language: C#)
+* [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) By [Noderyos](https://github.com/Noderyos) (Language: Python)
+* [Jawfixer](https://github.com/NSDCode/Jawfixer) By [NSDCode](https://github.com/NSDCode) (Language: C#)
+* [Jawbreaker-Deobfuscator](https://github.com/Bleu-No/jawbreaker-Deobfuscator) By [Bleu-No](https://github.com/Bleu-No) (Language: Python)
+<br><br>
+  
+-----
 
 ### <p align="center">📌 Disclaimer 📌</p>
 
 <br><br>
 * ***Please use this program only for educational purposes.***
 * ***It is not meant to be used in any malicious way, and I decline any responsibility for what you do with it.***
-<br><br>
-
------
-  
-### <p align="center"> Deobfuscators </p>
-
-<br><br>
-* [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) By [HideakiAtsuyo](https://github.com/HideakiAtsuyo) (Language: C#)
-* [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) By [Noderyos](https://github.com/Noderyos) (Language: Python)
-* [Jawfixer](https://github.com/NSDCode/Jawfixer) By [NSDCode](https://github.com/NSDCode) (Language: C#)
-* [jawbreaker-Deobfuscator](https://github.com/Bleu-No/jawbreaker-Deobfuscator) By [Bleu-No](https://github.com/Bleu-No) (Language: Python)
 <br><br>
 
 -----
