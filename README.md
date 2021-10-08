@@ -55,10 +55,10 @@
 ### <p align="center">🪓 Deobfuscators 🪓</p>
 
 <br><br>
-* [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) By [HideakiAtsuyo](https://github.com/HideakiAtsuyo) | C#
-* [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) By [Noderyos](https://github.com/Noderyos) | Python
-* [Jawfixer](https://github.com/NSDCode/Jawfixer) By [NSDCode](https://github.com/NSDCode) | C#
-* [Jawbreaker-Deobfuscator](https://github.com/Bleu-No/jawbreaker-Deobfuscator) By [Bleu-No](https://github.com/Bleu-No) | Python
+* [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) by [HideakiAtsuyo](https://github.com/HideakiAtsuyo) | C#
+* [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) by [Noderyos](https://github.com/Noderyos) | Python
+* [Jawfixer](https://github.com/NSDCode/Jawfixer) by [NSDCode](https://github.com/NSDCode) | C#
+* [Jawbreaker-Deobfuscator](https://github.com/Bleu-No/jawbreaker-Deobfuscator) by [Bleu-No](https://github.com/Bleu-No) | Python
 <br><br>
   
 -----
