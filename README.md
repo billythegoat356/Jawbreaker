@@ -56,9 +56,9 @@
 
 <br><br>
 * [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) by [HideakiAtsuyo](https://github.com/HideakiAtsuyo) | C#
-* [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) by [Noderyos](https://github.com/Noderyos) | Python
+* [De-Jawbreaker](https://github.com/Noderyos/De-Jawbreaker) by [Noderyos](https://github.com/Noderyos) | Python3
 * [Jawfixer](https://github.com/NSDCode/Jawfixer) by [NSDCode](https://github.com/NSDCode) | C#
-* [Jawbreaker-Deobfuscator](https://github.com/Bleu-No/jawbreaker-Deobfuscator) by [Bleu-No](https://github.com/Bleu-No) | Python
+* [Jawbreaker-Deobfuscator](https://github.com/Bleu-No/jawbreaker-Deobfuscator) by [Bleu-No](https://github.com/Bleu-No) | Python3
 <br><br>
   
 -----
