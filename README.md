@@ -44,7 +44,7 @@
 
 ### <p align="center">💡 Ideas 💡</p>
 
-<p align="center"><strong>Feel free to make a pull request on this repository to submit any idea!</strong</p>
+<p align="center"><strong>Feel free to make a pull request on this repository to submit any idea!</strong></p>
 
 <br><br>
 * Host the HTTP server on Replit or a VPS/Raspberry PI
@@ -53,6 +53,8 @@
 -----
   
 ### <p align="center">🪓 Deobfuscators 🪓</p>
+  
+<p align="center"><strong>I did not check the code of the following repositories, some of them might be viruses</strong</p>
 
 <br><br>
 * [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) by [HideakiAtsuyo](https://github.com/HideakiAtsuyo) | C#
