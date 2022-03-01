@@ -54,7 +54,7 @@
   
 ### <p align="center">🪓 Deobfuscators 🪓</p>
   
-<p align="center"><strong>I did not check the code of the following repositories, some of them might be viruses.</strong></p>
+<p align="center"><strong>I did not check the code of the following repositories, use them at your own risks.</strong></p>
 
 <br><br>
 * [Jawbreaked](https://github.com/HideakiAtsuyo/Jawbreaked) by [HideakiAtsuyo](https://github.com/HideakiAtsuyo) | C#
